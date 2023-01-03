@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("hardhat-deploy");
 require("dotenv").config();
+require("@nomiclabs/hardhat-ethers");
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -40,6 +41,12 @@ module.exports = {
   namedAccounts: {
     deployer: {
       default: 0,
+      31337: 0,
+      1: 0,
+      5: 0,
+    },
+    user: {
+      default: 1,
       31337: 0,
       1: 0,
       5: 0,
