@@ -3,7 +3,7 @@ const {
   networkConfig,
   developmentChains,
 } = require("../helper-hardhat-config");
-const { verify } = require("../utils/verify");
+// const { verify } = require("../utils/verify");
 require("dotenv").config();
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
