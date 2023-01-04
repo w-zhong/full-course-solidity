@@ -9,9 +9,8 @@ module.exports = {
     hardhat: { chainId: 31337 },
     goerli: {
       url: process.env.RPC_URL_GOERLI,
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [process.env.PRIVATE_KEY1, process.env.PRIVATE_KEY2],
       chainId: 5,
-      blockConfirmations: 6,
     },
   },
   solidity: {

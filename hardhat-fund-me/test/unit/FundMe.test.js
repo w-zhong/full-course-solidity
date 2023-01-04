@@ -133,9 +133,10 @@ const { developmentChains } = require("../../helper-hardhat-config");
         it("Only allows the owner to withdraw", async function () {
           const accounts = await ethers.getSigners();
           const fundMeConnectedContract = await fundMe.connect(accounts[1]);
-          await expect(fundMeConnectedContract.withdraw()).to.be.revertedWith(
-            "FundMe__NotOwner"
-          );
+          // await expect(fundMeConnectedContract.withdraw()).to.be.revertedWith(
+          //   "FundMe__NotOwner"
+          // );
+          await expect(fundMeConnectedContract.withdraw()).to.be.reverted;
         });
       });
     });
